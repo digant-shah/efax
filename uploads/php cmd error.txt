@@ -1,0 +1,45 @@
+The temporary method will affect only a single command prompt.
+
+Open command prompt (start, run, cmd) and type in the following:
+
+set PATH=%PATH%;C:\path\to\php
+
+Where C:\path\to\php is the folder where your php.exe file is located. After this, you should be able to run PHP in any folder like this:
+
+C:\>php -v
+PHP 5.2.5 (cli) (built: Nov  8 2007 23:18:51)
+Copyright (c) 1997-2007 The PHP Group
+Zend Engine v2.2.0, Copyright (c) 1998-2007 Zend Technologies
+    with Zend Extension Manager v1.2.0, Copyright (c) 2003-2007, by Zend Technologies
+    with Xdebug v2.0.2, Copyright (c) 2002-2007, by Derick Rethans
+
+Your output may vary depending on your PHP version and extensions.
+
+
+
+
+
+
+Permanent
+
+The permanent method will affect all command prompts and will persist upon reboots. It can also be set up to affect all users on the system and not only your account.
+
+Open control panel
+Go to System
+Choose the Properties tab
+Click Environment variables
+From this screen you can edit the environment variables of the system. If you only wish to modify them on your user account, click New under your own variables box and type in the following:
+
+Variable name: Path
+Variable value: %PATH%;C:\path\to\php
+
+If you want the change to affect all users on the system, choose the Path variable from the system variables box and click Edit.
+
+Append the variable value with:
+
+;C:\path\to\php
+
+Note the ; character. It’s used to separate directories in the var, so be sure it’s present.
+
+Again, C:\path\to\php is where your php.exe is located.
+
